@@ -9,16 +9,16 @@ class IdeaSeeder extends Seeder
 {
         public function run(): void
         {
-                Idea::create([
+                Idea::firstOrCreate([
                 'titulo' => 'Aplicación para organizar citas
                 veterinarias',
                 'descripcion' => 'Sistema para registrar y organizar
                 citas de mascotas.',
                 'estado' => 'registrada',
-                'autor' => 'Jose',
+                'autor' => 'jEnNi',
                 'categoria_id' => 1
             ]);
-            Idea::create([
+            Idea::firstOrCreate([
                 'titulo' => 'Plataforma para cursos en línea',
                 'descripcion' => 'Sistema para ofrecer cursos y
                 materiales educativos.',
@@ -26,12 +26,20 @@ class IdeaSeeder extends Seeder
                 'autor' => 'Pedro',
                 'categoria_id' => 2
             ]);
-            Idea::create([
+            Idea::firstOrCreate([
                 'titulo' => 'Aplicación para gestionar tareas escolares',
                 'descripcion' => 'Sistema que permite organizar las tareas pendientes mediante un calendario y recordatorios.',
                 'estado' => 'aprobada',
-                'autor' => 'Sylvia',
+                'autor' => 'Syl',
                 'categoria_id' => 3
             ]);
+             Idea::firstOrCreate([
+                'titulo' => 'Plataforma para cursos en línea',
+                'descripcion' => 'Sistema para ofrecer cursos y materiales educativos.',
+                'estado' => 'aprobada',
+                'autor' => 'Billie Eilish',
+                'categoria_id' => 2
+            ]);
+                
         }
 }
